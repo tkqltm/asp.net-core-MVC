@@ -1,0 +1,3 @@
+﻿$('textarea').trumbowyg({
+    lang: 'ko'
+});

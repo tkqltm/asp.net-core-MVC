@@ -1,0 +1,45 @@
+﻿@model AspnetNote.MVC6.Models.User 
+<h2>회원가입</h2>
+
+<form class="form-horizontal" method="post" asp-controller="Account" asp-action="Register">
+    <div class="form-group">
+
+        <label>사용자 이름</label>
+        <input type="text" class="form-control" asp-for="UserName" placeholder="사용자 이름 입력" />
+        <span class="text-danger" asp-validation-for="UserName"></span>
+    </div>
+
+    <div class="form-group">
+        <label>사용자 ID</label>
+        <input type="text" class="form-control" asp-for="UserID" placeholder="사용자 ID 입력" />
+        <span class="text-danger" asp-validation-for="UserID"></span>
+    </div>
+
+    <div class="form-group">
+        <label>사용자 비밀번호</label>
+        <input type="password" class="form-control" asp-for="Userpassword" placeholder="사용자 비밀번호 입력" />
+        <span class="text-danger" asp-validation-for="Userpassword"></span>
+    </div>
+
+    <div class="form-group">
+        <label>사용자 비밀번호 확인</label>
+        <input type="password" class="form-control" asp-for="Userpasswordcheck" placeholder="사용자 비밀번호 한번 더 입력" />
+        <span class="text-danger" asp-validation-for="Userpasswordcheck"></span>
+    </div>
+    <div class="form-group">
+        <label>사용자 휴대폰번호</label>
+        <input type="tel" class="form-control" asp-for="UserPhoneNumber" placeholder="사용자 휴대폰 번호 입력" />
+        <span class="text-danger" asp-validation-for="UserPhoneNumber"></span>
+    </div>
+
+    <div class="form-group">
+        <label>사용자 이메일</label>
+        <input type="email" class="form-control" asp-for="Useremail" placeholder="사용자 이메일 입력" />
+        <span class="text-danger" asp-validation-for="Useremail"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary"> 회원가입 </button>
+        <a class="btn btn-warning" asp-controller="Home" asp-action="Index"> 취소 </a>
+    </div>
+</form>
